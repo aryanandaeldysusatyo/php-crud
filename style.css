@@ -1,20 +1,18 @@
 body {
-    background-color: #2C2C2B;
+    background-color: #121212;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
 
-
-
-.primary-btn {
-    color: green;
+#judul {
+    display: flex;
+    justify-content: center;
 }
 
-.edit {
-    color: lightblue;
-}
-
-.hapus {
-    color: red;
+#tombol-tambah {
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: #008000;
 }
