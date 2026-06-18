@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
 <html lang="en">
 
 <head>
@@ -52,11 +53,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php
         if (!empty($errorMessage)) {
             echo "
-    <div class='alert alert-warning alert-dismissible fade show' role = 'alert'>
-    <strong>$errorMessage</strong>
-    <button type= 'button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-    </div>    
-    ";
+            <div class='alert alert-warning alert-dismissible fade show' role = 'alert'>
+            <strong>$errorMessage</strong>
+            <button type= 'button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>    
+            ";
+        }
+        ?>
+
+        <?php
+        if (!empty($succesfullyAdded)) {
+            echo "                
+                <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                <strong>$succesfullyAdded</strong>
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>                
+                </div>                
+                ";
         }
         ?>
 
@@ -95,21 +107,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
 
-            <?php
-            if (!empty($succesfullyAdded)) {
-                echo "
-                <div class= 'row mb-3'>
-                <div class='offset-sm-3 col-sm-6'>
-                <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                <strong>$succesfullyAdded</strong>
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                </div>
-                </div>
-                </div>
-                ";
-            }
-            ?>
-
 
             <!-- tombol menyimpan data -->
             <div class="row mb-3">
@@ -128,7 +125,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
 
     </div>
-
+    <!-- ini buat bootstrap.js nya (js bawaan bootstap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

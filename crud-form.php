@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="end" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
+<html lang="en">
 <!-- caution -->
 <!-- nama branch githubnya " prod " -->
 
